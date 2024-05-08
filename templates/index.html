@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Generate a New Challan {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="vehicle_number">Vehicle Number</label>
+        <input type="text" name="vehicle_number"
+               placeholder="Vehicle Number" class="form-control"
+               value="{{ request.form['vehicle_number'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="unit_name">Unit Name</label>
+        <input type="text" name="unit_name"
+               placeholder="Unit Name" class="form-control"
+               value="{{ request.form['unit_name'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="text" name="date"
+               placeholder="Date" class="form-control"
+               value="{{ request.form['date'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="time">Time</label>
+        <input type="text" name="time"
+               placeholder="Time" class="form-control"
+               value="{{ request.form['time'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="place_of_violation">Place of Violation</label>
+        <input type="text" name="place_of_violation"
+               placeholder="Place of Violation" class="form-control"
+               value="{{ request.form['place_of_violation'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="ps_limits">PS Limits</label>
+        <input type="text" name="ps_limits"
+               placeholder="PS Limits" class="form-control"
+               value="{{ request.form['ps_limits'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="violation">Violation</label>
+        <input type="text" name="violation"
+               placeholder="Violation" class="form-control"
+               value="{{ request.form['violation'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="fine_amount">Fine Amount</label>
+        <input type="text" name="fine_amount"
+               placeholder="Fine Amount" class="form-control"
+               value="{{ request.form['fine_amount'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
